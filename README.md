@@ -1,6 +1,6 @@
 # Customer 360 Identity Resolution (code sample)
 
-Code sample for the **Customer 360 & CAR Platform Design** assessment. It implements the identity resolution approach described in Section 1 of the architecture document: deterministic-first matching, a stable Mal-owned `customer_key`, config-driven survivorship, and an Operations exception queue in place of automatic merges.
+Code sample for the **Customer 360 & CAR Platform Design** assessment. It implements the identity resolution approach described in Section 1 of the architecture document: deterministic-first matching, a stable owned `customer_key`, config-driven survivorship, and an Operations exception queue in place of automatic merges.
 
 ## Files
 
@@ -16,7 +16,7 @@ Code sample for the **Customer 360 & CAR Platform Design** assessment. It implem
 |---|---|---|---|
 | R1 | Core banking ↔ core banking | Verified Emirates ID; passport (issuing country + number) as fallback | 1.0 |
 | R2 | Salesforce ↔ core banking | CIF written to Salesforce as an external ID at onboarding | 1.0 |
-| R3 | Amplitude ↔ customer | `user_id` = Mal app user ID set at login, mapped to CIF | 1.0 |
+| R3 | Amplitude ↔ customer | `user_id` = app user ID set at login, mapped to CIF | 1.0 |
 | Device stitching | Anonymous Amplitude events ↔ customer | Device first seen at login; back-fill only for single-owner devices, within a 3-day late-arrival window | — |
 | Phase 2 | Salesforce Leads ↔ customer | Probabilistic (Fellegi–Sunter via Splink), always reviewed | scored |
 
