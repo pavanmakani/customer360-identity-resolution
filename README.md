@@ -1,4 +1,4 @@
-# Mal — Customer 360 Identity Resolution (code sample)
+# Customer 360 Identity Resolution (code sample)
 
 Code sample for the **Customer 360 & CAR Platform Design** assessment. It implements the identity resolution approach described in Section 1 of the architecture document: deterministic-first matching, a stable Mal-owned `customer_key`, config-driven survivorship, and an Operations exception queue in place of automatic merges.
 
