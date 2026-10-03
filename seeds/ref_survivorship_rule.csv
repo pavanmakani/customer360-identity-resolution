@@ -1,0 +1,14 @@
+attribute_name,attribute_group,source_system,source_priority,strategy,rationale
+full_name,IDENTITY_KYC,COREBANKING,1,PRIORITY,KYC-verified legal name
+full_name,IDENTITY_KYC,SALESFORCE,2,PRIORITY,Gap fill only; differences raise KYC_MISMATCH
+date_of_birth,IDENTITY_KYC,COREBANKING,1,PRIORITY,KYC-verified
+date_of_birth,IDENTITY_KYC,SALESFORCE,2,PRIORITY,Gap fill only; differences raise KYC_MISMATCH
+nationality_code,IDENTITY_KYC,COREBANKING,1,PRIORITY,KYC-verified
+gender_code,IDENTITY_KYC,COREBANKING,1,PRIORITY,KYC-verified
+language_code,PREFERENCE,SALESFORCE,1,PRIORITY,Customer-stated preference captured by CRM
+language_code,PREFERENCE,COREBANKING,2,PRIORITY,Correspondence language fallback
+marketing_channel_code,PREFERENCE,SALESFORCE,1,PRIORITY,Marketing preferences are owned by CRM
+primary_email,CONTACT,COREBANKING,1,VERIFIED_RECENCY,Verified > most recent verified > core banking
+primary_email,CONTACT,SALESFORCE,2,VERIFIED_RECENCY,Verified > most recent verified > core banking
+primary_mobile,CONTACT,COREBANKING,1,VERIFIED_RECENCY,Verified > most recent verified > core banking
+primary_mobile,CONTACT,SALESFORCE,2,VERIFIED_RECENCY,Verified > most recent verified > core banking
